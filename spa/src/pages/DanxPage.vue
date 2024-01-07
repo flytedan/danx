@@ -1,6 +1,6 @@
 <template>
-  <QPage class="row items-center justify-evenly">
-    <QBtn>Hello World</QBtn>
+  <QPage class="row items-center justify-evenly" title="Danx">
+    Welcome to Danx!
   </QPage>
 </template>
 
