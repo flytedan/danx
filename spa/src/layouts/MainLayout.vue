@@ -17,7 +17,7 @@
       </QToolbar>
     </QHeader>
 
-    <QDrawer v-model="isNavOpen" show-if-above bordered>
+    <QDrawer v-model="isNavOpen" bordered>
       <MainNavigation />
     </QDrawer>
 
@@ -28,15 +28,14 @@
 </template>
 
 <script lang="ts" setup>
+import { getItem, setItem } from 'src/helpers/storage';
+import MainNavigation from 'components/Navigation/MainNavigation.vue';
 import { ref } from 'vue';
 
-import MainNavigation from 'components/Navigation/MainNavigation.vue';
-// import { getItem, setItem } from 'src/helpers/storage';
-
-const isNavOpen = ref(false); //getItem('main-nav-open'));
+const isNavOpen = ref(getItem('main-nav-open'));
 
 function toggleDrawer() {
   isNavOpen.value = !isNavOpen.value;
-  // setItem('main-nav-open', isNavOpen.value);
+  setItem('main-nav-open', isNavOpen.value);
 }
 </script>

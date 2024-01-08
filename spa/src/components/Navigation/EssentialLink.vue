@@ -1,5 +1,5 @@
 <template>
-  <QItem clickable tag="a" target="_blank" :href="link">
+  <QItem tag="RouterLink" clickable :to="to">
     <QItemSection v-if="icon" avatar>
       <QIcon :name="icon" />
     </QItemSection>
@@ -23,7 +23,7 @@ defineProps({
     default: '',
   },
 
-  link: {
+  to: {
     type: String,
     default: '#',
   },

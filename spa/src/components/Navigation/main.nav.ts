@@ -1,8 +1,12 @@
 export default [
   {
-    title: 'Docs',
-    caption: 'quasar.dev',
+    title: 'Dashboard',
     icon: 'school',
-    link: 'https://quasar.dev',
+    to: '/',
+  },
+  {
+    title: 'Danx',
+    icon: 'school',
+    to: '/danx',
   },
 ];
